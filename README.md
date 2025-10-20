@@ -47,10 +47,15 @@ process_draft_automatically(images_dir="/path/to/images")
 ├── README.md
 ├── 1.txt/
 │   └── 123 - 副本.txt  # 参考文本（被转义的 Python 代码）
+├── docs/
+│   ├── plan.md                 # 方案与执行清单（本文）
+│   └── manifest.schema.json    # manifest 的 JSON Schema 草案
+├── examples/
+│   └── manifest.example.json   # manifest 示例文件
 └── video_auto/
     ├── __init__.py
-    ├── __main__.py     # 入口：python -m video_auto
-    └── sync.py         # 核心逻辑
+    ├── __main__.py             # 入口：python -m video_auto
+    └── sync.py                 # 核心逻辑
 ```
 
 ## 许可

@@ -1,0 +1,22 @@
+{
+  "project_name": "旅游宣传片",
+  "assets": {
+    "images": [
+      "素材/风景/山峰.jpg",
+      "素材/人物/游客.png"
+    ],
+    "audio": [
+      "素材/旁白/开场.mp3",
+      "素材/音效/海浪.wav"
+    ],
+    "bgm": "素材/BGM/轻音乐.mp3",
+    "fonts": ["素材/字体/标题.ttf"]
+  },
+  "draft_settings": {
+    "draft_path": "E:/剪映草稿/旅游项目",
+    "backup": {
+      "enable": true,
+      "location": "E:/项目备份"
+    }
+  }
+}

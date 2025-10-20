@@ -1,0 +1,57 @@
+{
+  "version": "1.0",
+  "project": {
+    "resolution": "1920x1080",
+    "aspect_ratio": "16:9",
+    "fps": 30,
+    "min_image_duration_ms": 5000,
+    "default_transition": { "type": "crossfade", "duration_ms": 300 },
+    "default_ken_burns": { "enabled": true, "direction": "auto", "amplitude": 0.21 },
+    "text_style": {
+      "font_family": "SourceHanSansSC",
+      "font_size": 64,
+      "color": "#FFFFFF",
+      "stroke_color": "#000000",
+      "stroke_width": 3,
+      "shadow": true,
+      "bold": false,
+      "italic": false,
+      "align": "center",
+      "position": { "x_pct": 50, "y_pct": 85 },
+      "max_width_pct": 90,
+      "line_height": 1.2
+    },
+    "safe_margins": { "left_pct": 5, "right_pct": 5, "top_pct": 5, "bottom_pct": 10 },
+    "bgm": {
+      "path": "/absolute/path/to/bgm.mp3",
+      "volume": 0.3,
+      "ducking": { "enabled": true, "reduce_db": 12, "attack_ms": 200, "release_ms": 300, "prepad_ms": 150, "postpad_ms": 250 }
+    },
+    "opening": { "enabled": false },
+    "ending": { "enabled": false },
+    "watermark": { "enabled": false }
+  },
+  "segments": [
+    {
+      "id": "seg-001",
+      "audio": { "path": "/absolute/path/to/voice_001.m4a", "volume": 1.0 },
+      "images": [
+        { "path": "/absolute/path/to/img_001.jpg" }
+      ],
+      "text": "第一段的文案内容，作为叠加文字显示。",
+      "transition": { "type": "crossfade", "duration_ms": 300 }
+    },
+    {
+      "id": "seg-002",
+      "audio": { "path": "/absolute/path/to/voice_002.m4a", "volume": 1.0 },
+      "images": [
+        { "path": "/absolute/path/to/img_002.jpg", "weight": 2, "ken_burns": { "direction": "left", "amplitude": 0.25 } },
+        { "path": "/absolute/path/to/img_003.jpg", "weight": 1 }
+      ],
+      "text": "第二段文案，这一段有两张图片会在段内切换。",
+      "text_style": { "color": "#FFD700" },
+      "transition": { "type": "slide_left", "duration_ms": 300 },
+      "min_image_duration_ms": 3000
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Video Auto Assets Manifest",
+  "type": "object",
+  "properties": {
+    "project_name": { "type": "string" },
+    "assets": {
+      "type": "object",
+      "properties": {
+        "images": { "type": "array", "items": { "type": "string" } },
+        "audio": { "type": "array", "items": { "type": "string" } },
+        "bgm": { "type": "string" },
+        "fonts": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+    "draft_settings": {
+      "type": "object",
+      "properties": {
+        "draft_path": { "type": "string" },
+        "backup": {
+          "type": "object",
+          "properties": {
+            "enable": { "type": "boolean" },
+            "location": { "type": "string" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "required": ["project_name", "assets"],
+  "additionalProperties": true
+}
